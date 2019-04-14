@@ -1,0 +1,11 @@
+<div class="sameFun">
+
+    <div class="lightBox">
+          <div class="light" [ngClass]="{'red': index === 0 || index === 1}"></div>
+          <div class="light" [ngClass]="{'yellow': index === 1 || index === 3}"></div>
+          <div class="light" [ngClass]="{'green': index === 2}"></div>
+    </div>
+
+  <button class="toThenext" (click)="lightSignal()">Nästa signal</button>
+
+</div>

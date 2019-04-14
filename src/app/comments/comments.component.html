@@ -1,0 +1,11 @@
+<div class="wrapper">
+    <div class="review" *ngFor="let comment of commentData" [class.selectedComment]="comment === isItActive(comment)">
+      <p>{{comment.comment}}
+      <button (click)="removeListComment(comment)">Ta bort</button>
+    </div>
+</div>
+
+<div class="newReview">
+    <textarea [(ngModel)]="newReview" placeholder="Tell us about your Tea eye experience." cols="115" rows="10"></textarea>
+    <button (click)="addReview()">Send</button>
+</div>

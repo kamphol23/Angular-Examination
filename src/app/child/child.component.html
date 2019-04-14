@@ -1,0 +1,14 @@
+
+
+  <app-parent
+    *ngFor = "let destination of travelData"  [class.selected]="destination === selectedTravel"
+    [travelData] = 'destination' (onAction)="closeAndopen ($event)" ></app-parent>
+
+<div class="infoTextRaper" *ngIf='selectedTravel.destination'>
+  <h1>{{selectedTravel.destination}}</h1>
+  <main class="infoText">{{selectedTravel.info}}</main>
+  <div class="hitOchDit"> <strong> Hur tar man sig runt: </strong> {{selectedTravel.transportation}}</div>
+  <button class="exit" (click)=closeAndopen($event)>
+    ❌
+  </button>
+</div>

@@ -1,0 +1,23 @@
+.container {
+    background-color: #A82626;
+    display: flex;
+    flex-direction: row;
+}
+.container > ul {
+    margin-left: 260px;
+}
+
+.container li {
+  font-size: 30px;
+    display: inline;
+    margin: 30px;
+    padding: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.active {
+    color: white;
+}

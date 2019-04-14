@@ -1,0 +1,12 @@
+main{
+    color: black;
+    display: inline;
+    margin-left: 285px;
+    font-size: 30px;
+
+
+}
+main:hover {
+  color: #A82626;
+  cursor: default;
+}
