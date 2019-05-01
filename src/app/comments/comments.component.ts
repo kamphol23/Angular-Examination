@@ -20,11 +20,22 @@ export class CommentsComponent implements OnInit {
       return comment
     }
   }
+  markedDiv(comment){
+    let answer = this.selectedComment.includes(comment)
+    if (answer){
+      this.selectedComment = this.selectedComment.filter(object => object !== comment)
+    } else {
+      this.selectedComment.push(comment);
+      
+    }
+  };
 
   constructor( commentsService: CommentsService ) {
 
     this.commentsService = commentsService;
    }
+
+
 
   ngOnInit() {
 

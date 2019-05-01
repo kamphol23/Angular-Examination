@@ -1,7 +1,9 @@
 <div class="wrapper">
-    <div class="review" *ngFor="let comment of commentData" [class.selectedComment]="comment === isItActive(comment)">
+    <div class="review" *ngFor="let comment of commentData"  (click)="markedDiv(comment)" [class.selectedComment]="comment === isItActive(comment)">
       <p>{{comment.comment}}
-      <button (click)="removeListComment(comment)">Ta bort</button>
+        <div class="removeComment">
+          <button (click)="removeListComment(comment)">Ta bort</button>
+        </div>
     </div>
 </div>
 
